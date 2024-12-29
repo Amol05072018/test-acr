@@ -14,6 +14,6 @@ jobs:
     - name: Login to Microsoft Azure
       run: |
         az login --service-principal --tenant ${{ secrets.AZURE_TENANT_ID}} --username ${{ secrets.AZURE_CLIENT_ID}} --password ${{ secrets.AZURE_SECRET_ID}}
-    -name: Create Azure Container Registry
+    - name: Create Azure Container Registry
       run: |
         az acr create --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --name ${{ env.AZURE_ACR_NAME }} --sku Basic
