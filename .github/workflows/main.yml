@@ -17,3 +17,6 @@ jobs:
     - name: Create Azure Container Registry
       run: |
         az acr create --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --name ${{ env.AZURE_ACR_NAME }} --sku Basic
+    - name: Authenticate to ACR
+      run: |
+        az acr login --name ${{ env.AZURE_ACR_NAME }}
