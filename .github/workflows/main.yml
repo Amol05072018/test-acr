@@ -5,7 +5,7 @@ on:
 
 env:
   AZURE_RESOURCE_GROUP : test-acr-rg
-  AZURE_ACR_NAME : myregistry
+  AZURE_ACR_NAME : myregistry-29dec
 
 jobs:
   azuread:
