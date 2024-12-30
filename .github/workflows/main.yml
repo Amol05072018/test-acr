@@ -27,4 +27,4 @@ jobs:
         tags: ${{ env.AZURE_ACR_NAME }}.azurecr.io/pbkimagepbk:v1
     - name: Create Azure Container Instance Group
       run: |
-        az container create --image pbkregistrypbk.azurecr.io/pbkimagepbk:v1 --name pbkcontainerpbk --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --ip-address public --dns-name-label aci-demo --location eastus --registry-username ${{ secrets.AZURE_CLIENT_ID}} --registry-password ${{ secrets.AZURE_SECRET_ID}}
+        az container create --image pbkregistrypbk.azurecr.io/pbkimagepbk:v1 --name pbkcontainerpbk --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --ip-address public --dns-name-label aci-demo --location eastus --registry-username ${{ secrets.AZURE_CLIENT_ID}} --registry-password ${{ secrets.AZURE_SECRET_ID}} --os-type Windows
