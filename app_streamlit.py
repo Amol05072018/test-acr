@@ -12,7 +12,7 @@ st.write(np.mean(binom_dist))
 import matplotlib.pyplot as plt
 
 list_of_means = []
-for i in range(0, 1000):
+for i in range(0, 1001):
  list_of_means.append(np.random.choice(binom_dist, 100, replace=True).
 mean())
 fig, ax = plt.subplots()  # create a new figure window
